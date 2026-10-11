@@ -5,13 +5,13 @@
 class Byway < Formula
   desc "Save shell commands by name, run them anywhere"
   homepage "https://github.com/Gabrigeno/byway"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Gabrigeno/byway/releases/download/v0.1.5/byway_0.1.5_darwin_amd64.tar.gz"
-      sha256 "833a7a5374995ff6438549efdc130641bc23e7834ff2fe777d53e820f75eb9ad"
+      url "https://github.com/Gabrigeno/byway/releases/download/v0.1.6/byway_0.1.6_darwin_amd64.tar.gz"
+      sha256 "f7590edb8990f6940f36a027828972d638c014fcef757bb22af2fa4bccee8b89"
 
       define_method(:install) do
         bin.install "byway"
@@ -19,8 +19,8 @@ class Byway < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Gabrigeno/byway/releases/download/v0.1.5/byway_0.1.5_darwin_arm64.tar.gz"
-      sha256 "d102214cef83676afd5bcec214474a4ca8f952f3f77bfc3f8ebe9b10c79324f1"
+      url "https://github.com/Gabrigeno/byway/releases/download/v0.1.6/byway_0.1.6_darwin_arm64.tar.gz"
+      sha256 "f376f745546f5e1fc13ff955c3401d140932c8a00601076e132d068b1404ebb3"
 
       define_method(:install) do
         bin.install "byway"
@@ -31,16 +31,16 @@ class Byway < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Gabrigeno/byway/releases/download/v0.1.5/byway_0.1.5_linux_amd64.tar.gz"
-      sha256 "d0d5887d0df4e771787feb6c1b18c7efe38b74a1f292ac6146f986583ae1a1c1"
+      url "https://github.com/Gabrigeno/byway/releases/download/v0.1.6/byway_0.1.6_linux_amd64.tar.gz"
+      sha256 "3888d3397192da04472acad408e9f618f6155b5a3cc1c9d8ebbe827aa1698923"
       define_method(:install) do
         bin.install "byway"
         (share/"fish/vendor_conf.d").install "contrib/fish/byway.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Gabrigeno/byway/releases/download/v0.1.5/byway_0.1.5_linux_arm64.tar.gz"
-      sha256 "f44997ff85a729c0eb040ef048c6c8f4fb778353ec9e3b86887116a0ce4a702b"
+      url "https://github.com/Gabrigeno/byway/releases/download/v0.1.6/byway_0.1.6_linux_arm64.tar.gz"
+      sha256 "6b218e4b496396ab2118caf6dd3a31ac23f8ef4e9eeba18d68a1fa1a867d517d"
       define_method(:install) do
         bin.install "byway"
         (share/"fish/vendor_conf.d").install "contrib/fish/byway.fish"
